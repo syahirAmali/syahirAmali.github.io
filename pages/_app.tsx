@@ -1,7 +1,7 @@
 import '@fontsource/roboto/400.css'
 
 import { ChakraProvider } from '@chakra-ui/react'
-import theme from "./theme"
+import theme from "./lib/theme"
 
 function MyApp({ Component, pageProps }) {
   return (
