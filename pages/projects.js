@@ -1,4 +1,3 @@
-import Head from 'next/head'
 
 import { Flex, Button, useColorMode, Spacer, Link, Text } from '@chakra-ui/react';
 import { MoonIcon, ChevronLeftIcon } from '@chakra-ui/icons';
