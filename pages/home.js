@@ -22,7 +22,7 @@ export default function Home() {
             <Heading>
               <Center>
                 <Text>
-                  Syahir Amali 
+                  Hi, I'm Syahir.
                 </Text>
               </Center>
 
@@ -37,18 +37,18 @@ export default function Home() {
                 <Divider />
 
                 <Text fontSize='lg'>
-                  Hi, Im a web developer who loves technology, shiny machines, tools and cats.  
+                  A web developer who loves technology, shiny tools and cats.  
                 </Text>
 
                 <VStack spacing='60px'>
                   <Text fontSize='lg'>
-                    After falling into the crypto rabbithole, I've made a transition to Web3. With so many available resources, a never ending journey of learning begins.
+                    Made a transition to Web3 after working with enterprise and client side systems, in the banking and oil and gas industry. With so many available resources, a never ending journey of learning begins.
                   </Text>
 
                   <NextLink href='/projects' passHref>
                     <Link>
                       <Text fontSize='lg'>
-                        Check out some Projects here.
+                        Check out some things im working on here.
                       </Text>
                     </Link>
                   </NextLink>
