@@ -1,7 +1,9 @@
 
-import { Center, Text, Heading, Flex, Button, useColorMode, Divider, VStack, Link, HStack } from '@chakra-ui/react';
+import { Center, Text, Heading, Flex, Button, useColorMode, Divider, VStack, Link, HStack, UnorderedList, ListItem, Tooltip  } from '@chakra-ui/react';
 import { MoonIcon } from '@chakra-ui/icons';
-import { AiFillTwitterCircle, AiOutlineGithub, AiFillMail, AiOutlinePaperClip } from "react-icons/ai";
+import { AiFillTwitterCircle, AiOutlineGithub, AiFillMail } from "react-icons/ai";
+import { BsNewspaper } from "react-icons/bs";
+
 import NextLink from "next/link";
 
 export default function Home() {
@@ -17,7 +19,7 @@ export default function Home() {
       </Flex>
       
       <Flex justifyContent={"center"}>
-        <Flex width={"20vw"} position={"fixed"} height={"100%"}>
+        <Flex width={"25vw"} position={"fixed"} height={"100%"}>
           <Center>
             <Heading>
               <Center>
@@ -30,37 +32,74 @@ export default function Home() {
 
                 <Center>
                   <Text fontSize='xl'>
-                    Web3 Developer
+                    A Developer
                   </Text>
                 </Center>
 
                 <Divider />
 
                 <Text fontSize='lg'>
-                  A web developer who loves technology, shiny tools and cats.  
+                  Loves tech, shiny tools and cats.  
+                </Text>
+                
+                <Text fontSize='lg'>
+                  Currently building in web3 and trying to get more involved with the community. Looking to create a positive impact I have on the world and educate myself and others.    
+                </Text>
+
+                <Text fontSize='lg'> 
+                  A never ending journey of learning.
                 </Text>
 
                 <VStack spacing='60px'>
-                  <Text fontSize='lg'>
-                    Made a transition to Web3 after working with enterprise and client side systems, in the banking and oil and gas industry. With so many available resources, a never ending journey of learning begins.
-                  </Text>
 
-                  <NextLink href='/projects' passHref>
-                    <Link>
-                      <Text fontSize='lg'>
-                        Check out some things im working on here.
-                      </Text>
-                    </Link>
-                  </NextLink>
+                  <UnorderedList size="md">
+                    <ListItem size="md">
+                      <NextLink href='/about' passHref>
+                        <Link>
+                          <Text fontSize='lg' as='u'>
+                            More about me.
+                          </Text>
+                        </Link>
+                      </NextLink>
+                    </ListItem>
+
+                    <ListItem size="md">
+                      <NextLink href='/skills' passHref>
+                        <Link>
+                          <Text fontSize='lg' as='u'>
+                            Some skills.
+                          </Text>
+                        </Link>
+                      </NextLink>
+                    </ListItem>
+                    
+                    <ListItem size="md">
+                      <NextLink href='/projects' passHref>
+                        <Link>
+                          <Text fontSize='lg' as='u'>
+                            Some things im working on.
+                          </Text>
+                        </Link>
+                      </NextLink>
+                    </ListItem>
                   
+                  </UnorderedList>
 
                   <Center>
 
                     <HStack spacing='24px'>
-                      <Link href='https://twitter.com/SyahirAmali' isExternal><AiFillTwitterCircle /></Link>
-                      <Link href='https://github.com/syahirAmali' isExternal><AiOutlineGithub /></Link>
-                      <Link href='mailto:syahiramali@gmail.com' isExternal><AiFillMail /></Link>
-                      <Link href='https://mirror.xyz/syahiramali.eth' isExternal><AiOutlinePaperClip /></Link>
+                      <Tooltip label='Twitter' fontSize='md'>
+                        <Link href='https://twitter.com/SyahirAmali' isExternal><AiFillTwitterCircle /></Link>
+                      </Tooltip>
+                      <Tooltip label='Github' fontSize='md'>
+                        <Link href='https://github.com/syahirAmali' isExternal><AiOutlineGithub /></Link>
+                      </Tooltip>
+                      <Tooltip label='Mail me' fontSize='md'>
+                        <Link href='mailto:syahiramali@gmail.com' isExternal><AiFillMail /></Link>
+                      </Tooltip>
+                      <Tooltip label='Mirror Blog' fontSize='md'>
+                        <Link href='https://mirror.xyz/syahiramali.eth' isExternal><BsNewspaper /></Link>
+                      </Tooltip>
                     </HStack>
                     
                   </Center>
