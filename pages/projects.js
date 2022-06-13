@@ -44,10 +44,10 @@ export default function Home() {
               </Text>
 
               <UnorderedList size="md">
-                <VStack spacing='30px'>
+                <VStack spacing='40px'>
 
                 <ListItem size="md">
-                  <VStack spacing='10px'>
+                  <VStack spacing='10px' align="start">
                     <Text fontSize='lg' as='u'>
                       Fully On-Chain Idle Game (ERC721-based)
                     </Text>
@@ -59,7 +59,7 @@ export default function Home() {
                 </ListItem>
 
                 <ListItem size="md">
-                  <VStack spacing='10px'>
+                  <VStack spacing='10px' align="start">
                     <Text fontSize='lg' as='u'>
                       Proof Of Competency
                     </Text>
@@ -70,7 +70,27 @@ export default function Home() {
                 </ListItem>
 
                 <ListItem size="md">
-                  <VStack spacing='10px'>
+                  <VStack spacing='10px' align="start">
+                    <Text fontSize='lg' as='u'>
+                      Centralized Payment Gateway
+                    </Text>
+                    <Text>
+                      1. Blockchain Monitoring
+                    </Text>
+                    <Text textAlign="justify">
+                      - So there will be two parts to this, one of the core component and most of the heavy lifting for this project is the blockchain monitoring and transaction data analysis, across multiple blockchains. This is mainly built as a backend service, and api which will be exposed to the users. 
+                    </Text>
+                    <Text>
+                      2. HD - Wallet Generation
+                    </Text>
+                    <Text textAlign="justify">
+                      - The creation and maintenance of Hierarchical Deterministic (HD) wallets, is done with this module. The token standards and derivation paths for each chain are observed and followed accordingly.
+                    </Text>
+                  </VStack>
+                </ListItem>
+
+                <ListItem size="md">
+                  <VStack spacing='10px' align="start">
                     <Text fontSize='lg' as='u'>
                       Back to basics - Solidity ed.
                     </Text>
