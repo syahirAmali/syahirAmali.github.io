@@ -1,8 +1,9 @@
 
-import { Flex, Button, useColorMode, Spacer, Link, Text, VStack, Image } from '@chakra-ui/react';
+import { Flex, Button, useColorMode, Spacer, Link, Text, VStack, Image, Center, HStack, Tooltip } from '@chakra-ui/react';
 import { MoonIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import NextLink from "next/link";
-
+import { AiFillTwitterCircle, AiOutlineGithub, AiFillMail } from "react-icons/ai";
+import { BsNewspaper } from "react-icons/bs";
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -60,7 +61,22 @@ export default function Home() {
         </Flex>
         
       <footer>
-      
+      <Center padding="25px">
+        <HStack spacing='24px'>
+          <Tooltip label='Twitter' fontSize='md'>
+            <Link href='https://twitter.com/SyahirAmali' isExternal><AiFillTwitterCircle /></Link>
+          </Tooltip>
+          <Tooltip label='Github' fontSize='md'>
+            <Link href='https://github.com/syahirAmali' isExternal><AiOutlineGithub /></Link>
+          </Tooltip>
+          <Tooltip label='Mail me' fontSize='md'>
+            <Link href='mailto:syahiramali@gmail.com' isExternal><AiFillMail /></Link>
+          </Tooltip>
+          <Tooltip label='Mirror Blog' fontSize='md'>
+            <Link href='https://mirror.xyz/syahiramali.eth' isExternal><BsNewspaper /></Link>
+          </Tooltip>
+        </HStack>
+      </Center>
       </footer>
     </div>
   )

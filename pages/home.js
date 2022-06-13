@@ -36,7 +36,7 @@ export default function Home() {
               </Text>
               
               <Text fontSize='lg' align="center" textAlign="justify">
-                Currently building in web3 and trying to get more involved with the community. Looking to create a positive impact I have on the world and educate myself and others.    
+                Currently building in web3 and trying to get more involved with the community. Looking to create a positive impact he has on the world and provide education.    
               </Text>
 
               <Text fontSize='lg' textAlign="justify"> 

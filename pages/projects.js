@@ -1,5 +1,7 @@
 
-import { Flex, Button, useColorMode, Spacer, Link, Text, VStack, UnorderedList, ListItem, Image } from '@chakra-ui/react';
+import { Flex, Button, useColorMode, Spacer, Link, Text, VStack, UnorderedList, ListItem, Image, Center, HStack, Tooltip, Divider } from '@chakra-ui/react';
+import { AiFillTwitterCircle, AiOutlineGithub, AiFillMail } from "react-icons/ai";
+import { BsNewspaper } from "react-icons/bs";
 import { MoonIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import NextLink from "next/link";
 
@@ -79,33 +81,33 @@ export default function Home() {
                 </ListItem>
                 
                 <ListItem size="md">
-                  <VStack spacing='10px'>
+                  <VStack spacing='20px' align="start">
                     <Text fontSize='lg' as='u'>
                       CTF Collections
                     </Text>
-                    <Text textAlign="justify">
+                    <Text textAlign="left">
                       - A Collection of CTF problems attempted and solved, is comprised of many sources which includes and not limited to:-
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://ethernaut.openzeppelin.com/"><u>Ethernaut</u></a>, by OpenZeppelin. A wargame inspired learning tool, to demonstrate from common to and more rare vulnerabilities.
+                    <Text textAlign="left">
+                      // <a href="https://ethernaut.openzeppelin.com/"><u>Ethernaut</u></a>, by OpenZeppelin. A wargame inspired learning tool, to demonstrate from common to and more rare vulnerabilities.
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://capturetheether.com/"><u>Capture the Ether</u></a>, by @smarx. A traditional CTF event to learn about security.
+                    <Text textAlign="left">
+                      // <a href="https://capturetheether.com/"><u>Capture the Ether</u></a>, by @smarx. A traditional CTF event to learn about security.
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://www.damnvulnerabledefi.xyz/"><u>Damn Vulnerable Defi</u></a>, by @tinchoabbate. A similar wargame like ethernaut, but focuses more on offensive security and is useful for learning to become a bug hunter or security auditor.
+                    <Text textAlign="left">
+                      // <a href="https://www.damnvulnerabledefi.xyz/"><u>Damn Vulnerable Defi</u></a>, by @tinchoabbate. A similar wargame like ethernaut, but focuses more on offensive security and is useful for learning to become a bug hunter or security auditor.
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://blockchain-ctf.securityinnovation.com/#/"><u>Security Innovation Blockchain CTF</u></a>, by SecurityInnovation. A CTf platform for dapps and smart contract vulnerabilities.
+                    <Text textAlign="left">
+                      // <a href="https://blockchain-ctf.securityinnovation.com/#/"><u>Security Innovation Blockchain CTF</u></a>, by SecurityInnovation. A CTF platform for dapps and smart contract vulnerabilities.
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://github.com/nccgroup/GOATCasino"><u>Goat Casino</u></a>, by Goat Casino. Is an intentional release of vulnerable truffle smart contract deployment for aimed to allow hacking.
+                    <Text textAlign="left">
+                      // <a href="https://github.com/nccgroup/GOATCasino"><u>Goat Casino</u></a>, by Goat Casino. Is an intentional release of vulnerable truffle smart contract deployment for aimed to allow hacking.
                     </Text>
-                    <Text textAlign="justify">
-                      <a href="https://github.com/paradigm-operations/paradigm-ctf-2021"><u>Paradigm CTF 2021</u></a>, by Paradigm. Is an Eth focused security competition by paradigm.
+                    <Text textAlign="left">
+                      // <a href="https://github.com/paradigm-operations/paradigm-ctf-2021"><u>Paradigm CTF 2021</u></a>, by Paradigm. Is an Eth focused security competition by paradigm.
                     </Text>
 
-                    <Text textAlign="justify">
+                    <Text textAlign="center">
                       You may also find Syahir's attempt and documentation of these CTFs on his Git, <a href="https://github.com/syahirAmali/"><u>here</u></a>.
                     </Text>
                   </VStack>
@@ -120,7 +122,22 @@ export default function Home() {
         </Flex>
         
       <footer>
-      
+      <Center padding="25px">
+        <HStack spacing='24px'>
+          <Tooltip label='Twitter' fontSize='md'>
+            <Link href='https://twitter.com/SyahirAmali' isExternal><AiFillTwitterCircle /></Link>
+          </Tooltip>
+          <Tooltip label='Github' fontSize='md'>
+            <Link href='https://github.com/syahirAmali' isExternal><AiOutlineGithub /></Link>
+          </Tooltip>
+          <Tooltip label='Mail me' fontSize='md'>
+            <Link href='mailto:syahiramali@gmail.com' isExternal><AiFillMail /></Link>
+          </Tooltip>
+          <Tooltip label='Mirror Blog' fontSize='md'>
+            <Link href='https://mirror.xyz/syahiramali.eth' isExternal><BsNewspaper /></Link>
+          </Tooltip>
+        </HStack>
+      </Center>
       </footer>
     </div>
   )
