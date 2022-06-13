@@ -29,8 +29,8 @@ export default function Home() {
         </Flex>
 
         <Flex justifyContent={"center"}>
-          <Flex width={"45vw"}>
-
+          <Flex>
+            
             <VStack spacing='30px'>
               <Text fontSize='xl'>
                 Some skills that Syahir has.
@@ -70,7 +70,7 @@ export default function Home() {
                 Research
               </Text>
               <Text fontSize='sm' align="center">
-                Other than development, Syahir also spends his time researching web3 and blockchain technologies that interest him
+                Other than development, Syahir also spends his time researching web3 and blockchain technologies that interest him.
               </Text>
 
               <UnorderedList size="md">
