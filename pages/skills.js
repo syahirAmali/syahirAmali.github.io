@@ -23,19 +23,18 @@ export default function Home() {
             <Spacer />
             <Flex justify={'right'}>
                 <Button leftIcon={<MoonIcon />} onClick={toggleColorMode} variant='ghost'>
-                    Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
                 </Button>
             </Flex>
         </Flex>
 
         <Flex justifyContent={"center"}>
-          <Flex width={"25vw"} position={"fixed"} height={"100%"}>
+          <Flex width={"45vw"}>
 
             <VStack spacing='30px'>
               <Text fontSize='xl'>
                 Some skills that Syahir has.
               </Text>
-              <Text fontSize='xl'>
+              <Text fontSize='xl' as='u'>
                 Development
               </Text>
               <UnorderedList size="md">
@@ -66,10 +65,10 @@ export default function Home() {
                 
               </UnorderedList>
 
-              <Text fontSize='xl'>
+              <Text fontSize='xl' as='u'>
                 Research
               </Text>
-              <Text fontSize='sm'>
+              <Text fontSize='sm' align="center">
                 Other than development, Syahir also spends his time researching web3 and blockchain technologies that interest him
               </Text>
 
@@ -77,7 +76,7 @@ export default function Home() {
 
                 <ListItem size="md">
                   <Text fontSize='lg' >
-                    Ethereum(EVM), contract optimizations(security and gas) 
+                    Ethereum (EVM), Contract Cptimizations (Security and Gas) 
                   </Text>
                 </ListItem>
 
@@ -95,19 +94,19 @@ export default function Home() {
 
                 <ListItem size="md">
                   <Text fontSize='lg'>
-                    MEV and marketplaces
+                    MEV and Marketplaces
                   </Text>
                 </ListItem>
 
                 <ListItem size="md">
                   <Text fontSize='lg'>
-                    ZK Rollups and Cairo, (Scaling solutions)
+                    ZK Rollups and Cairo, (Scaling Solutions)
                   </Text>
                 </ListItem>
 
                 <ListItem size="md">
                   <Text fontSize='lg'>
-                    Public Goods and protocols
+                    Public Goods and Protocols
                   </Text>
                 </ListItem>
                   
