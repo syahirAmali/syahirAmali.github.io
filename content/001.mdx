@@ -1,0 +1,69 @@
+---
+title: 'What are smart contracts'
+publishedAt: '2022-04-09'
+summary: 'A first look into smart contracts.'
+---
+
+Getting into web3, one of the first things you’ll stumble upon will the concepts of smart contracts.
+
+To put it simply, smart contracts are a set of instructions that are stored on the blockchain, and will run predetermined conditions when they’re interacted with.
+
+The term “smart contract” was first coined by Nick Szabo in an article he wrote in 1994. Nick compared vending machines to smart contract as they are the primitive ancestors.
+
+While there are other factors involved, in essence a vending machine is simply just:
+
+```
+Pick your favorite snack + Insert money = Boom comes out your snack
+```
+
+This magical process is programmed into the vending machine, much like how logical functions will be programmed into a smart contracts. While smart contracts are able to do much more and go way beyond. They are still very much alike!
+
+While we can spend hours making the coolest vending machine we could, here is a very basic example of what a vending machine could look like:
+
+```js
+contract VendingMachine {
+
+  address owner;
+  mapping(address => uint256) candyBarBalance;
+
+  constructor() {
+    owner = msg.sender;
+    candyBarBalance[address(this)] = 10;
+  }
+
+  function refillCandy(uint amount) public { ... }
+
+  function purchaseCandy(uint amount) public payable { ... }
+}
+```
+
+So as a user in the web3 space, you would most likely be interacting with this contract, and the *purchaseCandy* function through a very nice front-end. And the smart contract will ensure that you have selected enough candy bars for purchase, there is enough in stock, and you are sending the correct value as payment. Once all of these conditions have passed the stock(amount) of candy bars in the vending machine will decrease, and will be added to the user.
+
+```js
+contract VendingMachine {
+
+function purchaseCandy(uint amount) public payable {
+    //checks for amount of candy being bought
+    require(amount > 0,
+      "You need to buy atleast 1 candy bar!");
+
+    //checks for balance of candy in our vending machine
+    require(candyBarBalance[adress(this)] >= amount,
+      "There is not enough candy bars in stock!");
+
+    //checks for value being sent is correct
+    require(msg.value == amount * 1 ether,
+      "You will need to pay atleast 1 ETH per candy bar to make your purchase!");
+
+    candyBarBalance[address(this)] -= amount;
+    candyBarBalance[msg.sender] += amount;
+
+  }
+}
+```
+
+Since smart contracts aren’t actually *smart* nor is it actually legally binding or enforceable by law. As can be seen from the vending machine example, smart contracts does well in translating business rules and processes into a program. It’s safe to say that many web3 project or protocol that writes and stores data in the blockchain uses a form of smart contract or another.
+
+It has enabled the possibility to automate, and decentralize complex transactions over the network securely. Smart contracts are integral and are here to stay in the web3 space.
+
+While we won’t be going deeper into smart contracts *yet*, [here](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html) you may find Nick Szabo’s article ***The Idea of Smart Contracts***.
