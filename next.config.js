@@ -2,12 +2,11 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+    output: 'export',
+    distDir: 'dist',
     images: {
-        loader: 'akamai',
-        path: '',
+        unoptimized: true,
     },
-    basePath: '/repository',
-    assetPrefix: '/repository/',
 }
 
 module.exports = nextConfig

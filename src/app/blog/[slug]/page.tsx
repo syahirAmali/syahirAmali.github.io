@@ -78,6 +78,14 @@ function formatDate(date: string) {
     return `${fullDate} (${formattedDate})`
 }
 
+export function generateStaticParams() {
+    const posts = getBlogPosts()
+
+    return posts.map((post) => ({
+        slug: post.slug,
+    }))
+}
+
 export default function Blog({ params }: any) {
     let post = getBlogPosts().find((post) => post.slug === params.slug)
 
