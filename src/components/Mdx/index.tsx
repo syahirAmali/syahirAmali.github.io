@@ -138,7 +138,7 @@ function slugify(str: any) {
 }
 
 function createHeading(level: any) {
-    return ({ children }: any) => {
+    const Component = ({ children }: any) => {
         let slug = slugify(children)
         return React.createElement(
             `h${level}`,
@@ -153,6 +153,8 @@ function createHeading(level: any) {
             children
         )
     }
+    Component.displayName = `Heading${level}`
+    return Component
 }
 
 let components = {

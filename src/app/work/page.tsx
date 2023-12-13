@@ -8,8 +8,8 @@ export default function Work() {
                 <span>
                     On a mission to build, break, and fine-tune solutions. As I
                     navigate this journey, my aim is to share the insights
-                    gained with fellow developers. I'm constantly exploring new
-                    and intriguing tech, adding a dash of excitement to the
+                    gained with fellow developers. I&apos;m constantly exploring
+                    new and intriguing tech, adding a dash of excitement to the
                     learning process.
                 </span>
             </div>
