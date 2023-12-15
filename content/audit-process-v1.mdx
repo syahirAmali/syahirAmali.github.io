@@ -1,0 +1,67 @@
+---
+title: 'My Audit Process v1.0'
+publishedAt: '2023-12-15'
+summary: 'Initial thoughts on audit process, and how I aim to approach smart contract auditing competitions like c4, sherlock and etc.'
+---
+
+Here I go through the basics of my audit process, and the goal is to spread out key areas and not lose myself too deep in the process and run out of time. This is what I'll be trying to replicate in every contest that I'll be going through.
+
+0. Prepare
+1. Digest
+2. Visualize
+3. Test
+4. Report
+
+## Prepare
+
+Prepare for the competition itself, research the type of protocol for the contest. For example, if it is a lending protocol, look into Aave, Compound, Maker, and etc. Look at common variants, and exploits within these protocols and know how it works.
+
+I included this as part of the process, but at times you might not actually have the time to prepare, or go through other protocols. This will be a good addition for any competition, but not necessary, the coming steps should be prioritized.
+
+Time suggestion: Up to you and your availability.
+
+## Digest
+
+Read through the code and documentation, it can/should be done interchangeably to gain a better grasp on the mental model and how everything interacts. This can be done throughout several iterations. There is no reason to go through everything once read through. Things can be understood better once a better context is created for the whole protocol.
+
+Time suggestion: 25%
+
+### Breaking down the code
+
+Break things down to smaller chunks, make it easier for yourself. You can start with the smaller to biggest functions. Collapse everything so that you don't overwhelm yourself, start small, and work your way through.
+
+Start with the NatSpec/Comments, then move towards the function name and inputs. Then go through the functions themselves, formulate and break things down so you can explain it in a few words. You can and should also write your own comments to help remind yourself of specific things, or better improve your own context of things. Then go through the functions in detail, look at the function calls and how they interact with other functions. Make audit tags/comments wherever you notice strange things, and question part of it. Finally do a high-level run through, essentially to solidify the mental model and understanding that you currently have about the protocol. By doing so, you should have a good idea of how things work, or at least things should start moving within your mind.
+
+Time suggestion:
+
+### Dissecting the documentation
+
+There's not that much to be said about here other than use it as reference on how it compares to your mental model, and understanding of the protocol. Make sure to note questions and concerns you might have along the way.
+
+Time suggestion:
+
+## Visualize
+
+This should not take the bulk of your time, but it is supposed to aid you in representing your understanding of the protocol. Here, you should be able to draw out everything you understand about the protocol, or how it should operate. By doing this, you should also be able to actually see the gaps or things which might not be consistent, it will also help you solidify your understanding of the protocol. Tools you can use for this includes, draw.io and excalidraw.
+
+Time suggestion: 10%
+
+## Test
+
+This is where the exciting stuff starts, we should now be getting back to the all the audit tags/comments that we have previously noted down, as well as any question that persisted. Dive into the functions, interactions, and whatever it leads to. It's as straightforward as investigate, create tests, question the implementation, create more tags/comments, ask questions, and repeat it all again until you are satisfied with it.
+
+If you do not have any experience with fuzzing or formal verification, don't spend time trying to figure it out now, just get right into the code and get dirty.
+
+Collect and set aside all of your findings, add notes/comments which maybe useful later on for when you start writing the report.
+
+Time suggestion: 45%
+
+## Report
+
+Compile your findings, and write the best report and analysis that you can. Include suggestions for mitigation as well of course, make sure it's as detailed and comprehensive as you can. But make sure to pace yourself since you do not want to run out of time before being able to write all the reports of your findings.
+
+Time suggestion: 20%
+
+## Conclusion
+
+Do note this is just my initial thoughts on my very own audit process, make changes as you may seem fit to cater to your own requirements and working style. The same can be said for the time suggested for the steps. All the best and happy hacking!
